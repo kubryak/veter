@@ -1,0 +1,7 @@
+@import 'normalize.css';
+
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: #9fb4d2;
+}
