@@ -3,13 +3,15 @@
   display: flex;
   justify-content: center;
   gap: 140px;
-  margin-top: 157px;
+  padding-top: 157px;
+  width: 100%;
 }
 
 .fade-in-left {
   opacity: 0;
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  animation: fadeIn-left 2s forwards;
+  animation: fadeIn-left 2s forwards, moveAndShrink-left .5s forwards 3s;
+  z-index: 2;
 }
 
 @keyframes fadeIn-left {
@@ -19,10 +21,18 @@
   }
 }
 
+@keyframes moveAndShrink-left {
+  to {
+    transform: scale(0.9) translateY(-240px) translateX(140px) rotate(11deg);
+    opacity: .4;
+  }
+}
+
 .fade-in-right {
   opacity: 0;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  animation: fadeIn-right 2s forwards;
+  animation: fadeIn-right 2s forwards, moveAndShrink-right .5s forwards 3s;
+  z-index: 2;
 }
 
 @keyframes fadeIn-right {
@@ -32,18 +42,71 @@
   }
 }
 
+@keyframes moveAndShrink-right {
+  to {
+    transform: scale(0.9) translateY(-242px) translateX(-110px) rotate(-11deg);
+    opacity: .4;
+  }
+}
+
 .logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.25);
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
-  animation: fadeIn-logo .5s forwards 1.2s;
+  animation: fadeIn-logo .5s forwards 1.2s, moveAndShrink-logo .5s forwards 3s;
 }
 
 @keyframes fadeIn-logo {
   to {
     opacity: 1;
+  }
+}
+
+@keyframes moveAndShrink-logo {
+  to {
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.fade-in-background:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeInBackground 2s forwards, scaleBackground 30s forwards, changeBackground 10s forwards;
+  animation-delay: 3s;
+  object-fit: cover;
+}
+
+@keyframes fadeInBackground {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleBackground {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes changeBackground {
+
+  0%,
+  50% {
+    background-image: url("../../images/slider-img-2.jpg");
+  }
+
+  100% {
+    background-image: url("../../images/slider-img-1.jpg");
   }
 }

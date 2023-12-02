@@ -6,10 +6,10 @@ import './logo.css'
 
 export default function Logo() {
   return (
-    <div className="container">
+    <div className="container fade-in-background">
       <img className="fade-in-left" src={vector_left} alt="Изображение левого вектора" />
       <img className="fade-in-right" src={vector_right} alt="Изображение правого вектора" />
-      <img className='logo' src={logo} alt="Логотип компании Veter"/>
+      <img className='logo' src={logo} alt="Логотип компании Veter" />
     </div>
   )
 }
