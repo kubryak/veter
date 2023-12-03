@@ -4,9 +4,11 @@ import Footer from "./components/footer/footer"
 import Background from "./components/background/background";
 import { useState } from "react";
 import Popup from "./components/popup/popup";
+import SuccessPopup from "./components/successPopup/successPopup";
 
 function App() {
   const [isOpened, setIsOpened] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
   return (
     <div className="App">
@@ -14,7 +16,8 @@ function App() {
       <Main setIsOpened={setIsOpened} />
       <Footer />
       <Background />
-      <Popup isOpened={isOpened} setIsOpened={setIsOpened} />
+      <Popup isOpened={isOpened} setIsOpened={setIsOpened} setIsFormSubmitted={setIsFormSubmitted} />
+      <SuccessPopup isFormSubmitted={isFormSubmitted} setIsFormSubmitted={setIsFormSubmitted} />
     </div>
   );
 }

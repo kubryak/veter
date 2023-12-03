@@ -4,9 +4,18 @@ import clouds from '../../images/popup__clouds.svg'
 import right_cloud from '../../images/cloud-right.png'
 import left_cloud from '../../images/cloud-left.png'
 
-export default function Popup({ isOpened, setIsOpened }) {
+export default function Popup({ isOpened, setIsOpened, setIsFormSubmitted }) {
   const handleClosePopup = () => {
     setIsOpened(false);
+    resetForm();
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      telephone: '',
+      isAgreed: false,
+    });
   };
 
   useEffect(() => {
@@ -45,6 +54,9 @@ export default function Popup({ isOpened, setIsOpened }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    setIsFormSubmitted(true);
+    setIsOpened(false);
+    resetForm();
   };
 
   const isFormValid = () => {
