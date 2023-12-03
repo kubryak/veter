@@ -18,7 +18,7 @@
   object-fit: cover;
   opacity: 0;
   animation: fadeInBackground 2s forwards, scaleBackground 30s forwards, changeBackground 10s forwards;
-  animation-delay: 3s;
+  animation-delay: 3s, 3s, 3.1s;
   z-index: -1;
 }
 
@@ -35,9 +35,7 @@
 }
 
 @keyframes changeBackground {
-
-  0%,
-  50% {
+  0%, 50% {
     background-image: url("../../images/slider-img-2.jpg");
   }
 
