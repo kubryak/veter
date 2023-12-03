@@ -1,8 +1,16 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   max-width: 1920px;
   background-color: #9fb4d2;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+* {
+  /* border: 1px solid red; */
 }
