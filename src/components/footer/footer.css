@@ -25,6 +25,7 @@
   text-decoration-skip-ink: none;
   opacity: 1;
   transition: opacity .5s ease;
+  color: #fff;
 }
 
 .footer__link:hover {
