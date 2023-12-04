@@ -132,7 +132,7 @@ export default function Popup({ isOpened, setIsOpened, setIsFormSubmitted }) {
               checked={formData.isAgreed}
               onChange={handleInputChange}
             />
-            <label htmlFor='politics' className='popup__checkbox-label'>Нажимая кнопку, Вы соглашаетесь<br />
+            <label htmlFor='politics' className='popup__checkbox-label'>Нажимая кнопку, Вы соглашаетесь
               на обработку персональных данных.</label>
           </div>
         </form>

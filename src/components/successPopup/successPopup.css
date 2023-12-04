@@ -68,3 +68,21 @@
   opacity: .8;
   cursor: pointer;
 }
+
+@media (max-width: 375px) {
+  .success-popup__container {
+    width: 291px;
+    border-radius: 28px;
+  }
+
+  .success-popup__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 40px 0 0;
+    width: 200px;
+  }
+
+  .success-popup__text {
+    font-size: 12px;
+  }
+}

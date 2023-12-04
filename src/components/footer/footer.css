@@ -4,12 +4,12 @@
   margin: 90px auto 0;
   color: #fff;
   opacity: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Начальная форма clip-path, блок полностью скрыт */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   animation: slideDown .1s ease-in forwards 3.3s;
 }
 
 @keyframes slideDown {
-  to{
+  to {
     opacity: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
@@ -34,4 +34,15 @@
 
 .footer__link:visited {
   color: #fff;
+}
+
+@media (max-width: 375px) {
+  .footer {
+    max-width: 295px;
+    margin-top: 70px;
+  }
+
+  .footer__text {
+    font-size: 10px;
+  }
 }

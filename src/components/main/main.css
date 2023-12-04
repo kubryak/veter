@@ -4,13 +4,14 @@
   align-items: center;
   flex-direction: column;
   margin-top: 113px;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Начальная форма clip-path, блок полностью скрыт */
-  animation: slideDown .15s ease-in forwards 3.1s; 
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* Начальная форма clip-path, блок полностью скрыт */
+  animation: slideDown .15s ease-in forwards 3.1s;
   transform: scale(1);
 }
 
 @keyframes slideDown {
-  to{
+  to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
@@ -24,7 +25,7 @@
   text-align: center;
   max-width: 480px;
   margin: 0;
-  animation: scaleTextDown .2s ease-out forwards 3.15s; 
+  animation: scaleTextDown .2s ease-out forwards 3.15s;
 }
 
 @keyframes scaleTextDown {
@@ -44,7 +45,7 @@
   letter-spacing: 0.7px;
   opacity: 1;
   transition: opacity .5s ease;
-  animation: scaleButtonDown .2s ease-out forwards 3.15s; 
+  animation: scaleButtonDown .2s ease-out forwards 3.15s;
 }
 
 @keyframes scaleButtonDown {
@@ -56,4 +57,34 @@
 .main__button:hover {
   opacity: .8;
   cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .main {
+    margin-top: 295px;
+  }
+
+  .main__title {
+    font-size: 31px;
+    max-width: 295px;
+    letter-spacing: 1.4px;
+    animation: scaleTextDown-small .2s ease-out forwards 3.15s;
+  }
+
+  .main__button {
+    padding: 15px 20px;
+    animation: scaleButtonDown-small .2s ease-out forwards 3.15s;
+  }
+}
+
+@keyframes scaleTextDown-small {
+  to {
+    font-size: 26px;
+  }
+}
+
+@keyframes scaleButtonDown-small {
+  to {
+    padding: 19px 24px;
+  }
 }

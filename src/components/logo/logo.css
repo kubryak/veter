@@ -70,3 +70,25 @@
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
+@keyframes moveAndShrink-logo-small {
+  to {
+    top: 25.5%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 375px) {
+  .fade-in-left {
+    display: none;
+  }
+
+  .fade-in-right {
+    display: none;
+  }
+
+  .logo {
+    transform: translate(-50%, -90%) scale(1.1);
+    animation: fadeIn-logo .5s forwards 1.2s, moveAndShrink-logo-small .5s forwards 3s;
+  }
+}
